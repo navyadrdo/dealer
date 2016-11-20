@@ -47,26 +47,19 @@
  <form id="seminar" name="dispatchform" method="post">
   <div id="header">
  <h2>DEALER MANAGEMENT SYSTEM</h2>
+ <br/>
+ </div>
   <div id="login">
 <p><a href="html/login.jsp">Login</a></p> 
  </div>
-  </div>
- 
+  
+ <br/>
 
   
  <div id="contentmenu">
  <ul>
-<!-- <li><a href="/dealer/WEB-INF/html/billing_info.html">BIlling</a></li> 
-<li><a href="/dealer/WEB-INF/html/dispach_page.html">Dispatch</a></li> 
- <li><a href="/dealer/WEB-INF/html/itemlist.html">Items</a></li>
- <li><a href="/dealer/WEB-INF/html/payment_page.html">Payment</a></li>
- <li><a href="/dealer/WEB-INF/html/dealer_reg.html">Dealer</a></li>
- <li><a href="/dealer/WEB-INF/html/add_sales_executive.html">SalesExecutive</a></li>
- 
-  -->
-  
-  <li><a href="/dealer/html/billing_info.html">BIlling</a></li> 
-<li><a href="/dealer/html/dispach_page.html">Dispatch</a></li> 
+ <li><a href="/dealer/html/billing_info.html">Billing</a></li> 
+ <li><a href="/dealer/html/dispach_page.html">Dispatch</a></li> 
  <li><a href="/dealer/html/itemlist.html">Items</a></li>
  <li><a href="/dealer/html/payment_page.html">Payment</a></li>
  <li><a href="/dealer/html/dealer_reg.html">Dealer</a></li>

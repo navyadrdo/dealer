@@ -16,7 +16,7 @@
         <thead>
             <tr>
             
-            <th>txid</th>
+            <th>Transaction Id</th>
                 <th>Amount</th>
                 <th>billto</th>
                 <th>itemid</th>

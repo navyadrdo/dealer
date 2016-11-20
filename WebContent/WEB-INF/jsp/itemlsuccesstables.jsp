@@ -14,11 +14,11 @@ ${returnitemlist}
 <table>
         <thead>
             <tr>
-                <th>ItemID</th>
+                <th>Item ID</th>
                 <th>Item Name</th>
-                <th>UnitCost</th>
-                 <th>Entereddate</th>
-                <th>Enteredby</th>
+                <th>Unit Cost</th>
+                 <th>Entered date</th>
+                <th>Entered by</th>
                              </tr>
         </thead>
         <tbody>
