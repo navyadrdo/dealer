@@ -1,0 +1,17 @@
+
+table{
+	width: 100%;
+	border:  1px solid white;
+	margin-top: 70px;
+	background-color:lightgreen;
+}
+
+th{
+	border:  2px solid white;
+	font-weight: bold;
+}
+
+td{
+	border:  2px solid white;
+	text-align: center;
+}
