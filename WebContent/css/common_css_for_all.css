@@ -9,7 +9,7 @@ form{
 
 #header{
 	width:100%;
-	background-color: black;
+	background-color: green;
 	height: 50px;
 	}
 #header h2{
@@ -62,7 +62,7 @@ color: red;
 	 width:500px;
 	 margin-left: 370px;
 	 align:center;
-	background-color:grey;
+	background-color:yellow;
 	
 	 
 }
@@ -93,7 +93,7 @@ width:100%;
 	width:16%;
 	font-size: 1.2em;
 	text-align: center;
-	background-color: grey;
+	background-color: skyblue;
 	padding-left: 1.2px;
 	
 }
