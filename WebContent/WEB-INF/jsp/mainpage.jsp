@@ -1,7 +1,8 @@
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%> 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+ <html>
  <head>
-  <title> New Document </title>
+  <title><tiles:insertAttribute name="title" ignore="true" /></title>  
   <meta name="Generator" content="EditPlus">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
@@ -39,16 +40,12 @@
  }
  
 </script>
- 
- 
- </head>
+</head>
 
  <body>
+ 
  <form id="seminar" name="dispatchform" method="post">
-  <div id="header">
- <h2>DEALER MANAGEMENT SYSTEM</h2>
- <br/>
- </div>
+   
   <div id="login">
 <p><a href="html/login.jsp">Login</a></p> 
  </div>
@@ -56,20 +53,7 @@
  <br/>
 
   
- <div id="contentmenu">
- <ul>
- <li><a href="/dealer/html/billing_info.html">Billing</a></li> 
- <li><a href="/dealer/html/dispach_page.html">Dispatch</a></li> 
- <li><a href="/dealer/html/itemlist.html">Items</a></li>
- <li><a href="/dealer/html/payment_page.html">Payment</a></li>
- <li><a href="/dealer/html/dealer_reg.html">Dealer</a></li>
- <li><a href="/dealer/html/add_sales_executive.html">SalesExecutive</a></li>
- </ul>
- </div>
-
- 
-
  </form>
-  
+   
  </body>
 </html>
