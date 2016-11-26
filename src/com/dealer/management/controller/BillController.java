@@ -3,6 +3,7 @@ package com.dealer.management.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -20,6 +21,12 @@ public class BillController {
 	
 	@Autowired
 	BillingService billingserviceimple;
+	@RequestMapping( method = RequestMethod.GET)
+	public String processRequest(ModelMap model) {
+		return "billing_info";
+	}
+	
+	
 	
 	@RequestMapping(value="/savebill",method=RequestMethod.POST)
 	public String Savebill(Model mo,Billing bill){

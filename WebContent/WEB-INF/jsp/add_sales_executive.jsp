@@ -1,14 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
-  <title> Sales Executive Page </title>
+  <title>Sales Executive Page</title>
   <meta name="Generator" content="EditPlus">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
 
-  <link rel="stylesheet" type="text/css" href="../css/chrome.css"/>
- <link rel="stylesheet" type="text/css" href="../css/common_css_for_all.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/chrome.css/>
+ <link rel="stylesheet" type="text/css" href="../css/common_css_for_all.css>
 
 
  <script type="text/javascript" src="../jquery/jquery.js"></script>
@@ -20,7 +20,7 @@
 
  function saveurl(){
  document.saleexecutiveform.action = "/dealer/sales/save.htm";
-
+ return true;
  }
 
  function updateurl(){
@@ -36,7 +36,7 @@
  }
 
  function getallurl(){
- document.saleexecutiveform.action = "/dealer/salesexecutive/getallexecutives.htm";
+	 document.saleexecutiveform.action = "/dealer/sales/get.htm";
  }
 
 </script>
@@ -62,11 +62,11 @@
 
  <div id="contentmenu">
  <ul>
-<li><a href="/dealer/WEB-INF/html_bkp/billing_info.html">Billing</a></li>
-<li><a href="/dealer/WEB-INF/html_bkp/dispach_page.html">Dispatch</a></li>
- <li><a href="/dealer/WEB-INF/html_bkp/itemlist.html">Items</a></li>
- <li><a href="/dealer/WEB-INF/html_bkp/payment_page.html">Payment</a></li>
- <li><a href="/dealer/WEB-INF/html_bkp/dealer_reg.html">Dealer</a></li>
+<li><a href="/dealer/html/billing_info.html">Billing</a></li>
+<li><a href="/dealer/html/dispach_page.html">Dispatch</a></li>
+ <li><a href="/dealer/html/itemlist.html">Items</a></li>
+ <li><a href="/dealer/html/payment_page.html">Payment</a></li>
+ <li><a href="/dealer/html/dealer_reg.html">Dealer</a></li>
  </ul>
  </div>
 
@@ -88,7 +88,7 @@
 <p><label>City/town</label><input type="text" name="city" value="dfsgsdf"/></p>
 <p><label>State</label><input type="text" name="state" value="dfgdf"/></p>
 <p><label>zip</label><input type="text" name="zip" value="3423"/></p>
-<p><label>Phone number</label><input type="text" name="phoneno" value="341323"/></p>
+<p><label>Phone number</label><input type="text" name="phoneno" value="34132311"/></p>
 <p><label>Qualification</label><input type="text" name="qualification" value="mca"/></p>
 <label></label>
 

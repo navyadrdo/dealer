@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,6 +19,11 @@ public class DispatchController {
 	@Autowired
 	private DispatchService dispatchserviceimple;
 	
+
+	@RequestMapping( method = RequestMethod.GET)
+	public String processRequest(ModelMap model) {
+		return "dispatch_page";
+	}
 	@RequestMapping(value="/savedispatch",method=RequestMethod.POST)
 	public String saveDispatch(Model mo,Dispatch disp){
 		System.out.println("u r in save dispatch");
@@ -48,15 +54,15 @@ public class DispatchController {
 	public String searchDispatch(Dispatch dis,Model mo){
 		 mo.addAttribute("dispatchlist",dispatchserviceimple.search(dis));
 	
-		System.out.println("u r in save dispatch");
-		return "Dispatchlsuccesstables";
+		System.out.println("u r in search dispatch");
+		return "Dispatchsuccesstables";
 	}
 	
 	@RequestMapping(value="/getdispatch",method=RequestMethod.POST)
 	public String getallDispatch(Model mo){
 	 mo.addAttribute("dispatchlist",dispatchserviceimple.Getall());
 		System.out.println("u r in getall dispatch");
-		return "Dispatchlsuccesstables";
+		return "Dispatchsuccesstables";
 	}
 	
 

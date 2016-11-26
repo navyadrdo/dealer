@@ -20,6 +20,11 @@ public class ItemController {
 	@Autowired
 	 private ItemService itemserviceimpl;
 	
+	
+	@RequestMapping( method = RequestMethod.GET)
+	public String processRequest(ModelMap model) {
+		return "itemlist";
+	}
 	@RequestMapping(value="/itemsave",method=RequestMethod.POST)
 	public String  saveItem(Model mo,Item it){
 		itemserviceimpl.saveitemservice(it);

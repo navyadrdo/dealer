@@ -16,6 +16,14 @@ public class PaymentController {
 	@Autowired
 	private PaymentService payserviceimpl;
 	
+	
+	
+	
+	
+	@RequestMapping( method = RequestMethod.GET)
+	public String processRequest(ModelMap model) {
+		return "payment_page";
+	}
 	@RequestMapping(value="/savepay",method=RequestMethod.POST)
 	public String savepayment(Model mo,Payment pay) {
 	System.out.println(pay.getPaymode());
