@@ -50,51 +50,45 @@
 
 </head>
 
-<body>
-	<form id="placementdetails" name="billform" method="post">
-		<div id="middle">
-			<h4>Billing Information</h4>
-
-			<p>
-				<label>Transaction ID</label><input type="text" name="txid"
-					value="12ws" />
-			</p>
-			<p>
-				<label>TraderName</label><input type="text" name="tname"
-					value="welcome" />
-			</p>
-			<p>
-				<label>Bill to mr.</label><input type="text" name="billto"
+<body><h4>Billing Information</h4>
+<form class="form-horizontal" id="placementdetails" name="billform" method="post">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Transaction ID</label>
+    <div class="col-sm-10">
+	<input type="text" class="form-control" id="txid"  value="12ws"/>
+    </div></div>
+ 	<div class="form-group">
+	<label  class="control-label col-sm-2"   >TraderName</label> <div class="col-sm-10"><input class="form-control"  type="text" name="tname"	value="welcome" /></div>
+	</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Bill to mr.</label><div class="col-sm-10"><input class="form-control"  type="text" name="billto"
 					value="ravi" />
-			</p>
-			<p>
-				<label>Item id</label><input type="text" name="itemid" value="1231" />
-			</p>
-			<p>
-				<label>No.of items</label><input type="text" name="noofitems"
+			</div></div>
+			<div class="form-group">
+				<label  class="control-label col-sm-2"  >Item id</label><div class="col-sm-10"><input class="form-control"  type="text" name="itemid" value="1231" />
+			</div></div>
+			<div class="form-group">
+				<label  class="control-label col-sm-2"  >No.of items</label><div class="col-sm-10"><input class="form-control"  type="text" name="noofitems"
 					value="3" id="noofitems" />
-			</p>
-			<p>
-				<label>unit price</label><input type="text" name="unitprice"
+			</div></div>
+			<div class="form-group">
+				<label  class="control-label col-sm-2"  >unit price</label><div class="col-sm-10"><input class="form-control"  type="text" name="unitprice"
 					value="5" id="unitprice" />
-			</p>
-			<p>
-				<label>Amount</label><input type="text" name="amount" value="15"
+			</div></div>
+			<div class="form-group">
+				<label  class="control-label col-sm-2"  >Amount</label><div class="col-sm-10"><input class="form-control"  type="text" name="amount" value="15"
 					id=amount />
-			</p>
-			<div class="">
-				<p>
-					<label></label><input type="submit" value="save"
-						name="billoperationcarry" onclick="saveurl();" /> <input
-						type="submit" value="update" name="billoperationcarry"
-						onclick="updateurl();" /> <input type="submit" value="Delete"
-						name="billoperationcarry" onclick="deleteurl();" /> <input
-						type="submit" value="search" name="billoperationcarry"
-						onclick="searchurl();" /> <input type="submit" value="GetAll"
-						name="billoperationcarry" onclick="getallurl();" />
-				</p>
+			</div></div>
+			<div class="form-group"> <div class="col-sm-offset-2 col-sm-10">
+					<input class="btn btn-success" type="submit"  value="save" name="billoperationcarry" onclick="saveurl();" />
+					<input class="btn btn-warning" type="submit" value="update"   name="billoperationcarry" onclick="updateurl();" /> 
+					<input class="btn btn-danger" type="submit"  value="Delete" name="billoperationcarry" onclick="deleteurl();" /> 
+					<input class="btn btn-info" type="submit" value="search" name="billoperationcarry" onclick="searchurl();" /> 
+					<input class="btn btn-primary "type="submit" value="GetAll" name="billoperationcarry" onclick="getallurl();" />
+				
 			</div>
-		</div>
+		
 	</form>
+	
 </body>
 </html>

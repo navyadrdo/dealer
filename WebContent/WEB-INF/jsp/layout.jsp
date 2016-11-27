@@ -1,4 +1,3 @@
-
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,6 +8,8 @@
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="container">
 	<div align="center">
 		<tiles:insertAttribute name="header" />
@@ -23,7 +24,6 @@
 	<div style="clear: both" align="right">
 		<tiles:insertAttribute name="footer" />
 	</div></div>
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -23,7 +23,7 @@
 		name="title" value="Login" /> <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" 
 		/> </definition> -->
 	<definition name="mainpage" extends="base.definition">
-		<put-attribute name="title" value="Login" />
+		<put-attribute name="title" value="Main Page" />
 		<put-attribute name="body" value="/WEB-INF/jsp/mainpage.jsp" />
 	</definition>
 	<definition name="AccessDenie" extends="base.definition">
