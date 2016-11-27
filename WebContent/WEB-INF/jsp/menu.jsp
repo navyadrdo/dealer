@@ -5,7 +5,7 @@
       
     </div>
     <ul class="nav navbar-nav">
-     <li class="active"> <a href="/dealer/access/HelloSpring.htm">Hello Spring</a></li>
+     <li class="active"> <a href="/dealer/HelloSpring.htm">Hello Spring</a></li>
 	<li><a href="/dealer/bills.htm">Billing</a></li>
 	<li><a href="/dealer/dispatch.htm">Dispatch</a></li> 
 	<li><a href="/dealer/item.htm">Items</a></li>
