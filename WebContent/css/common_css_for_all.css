@@ -1,116 +1,95 @@
-
-body{
+body {
 	background-color: lightgreen;
 }
 
-form{
+form {
 	
 }
 
-#header{
-	width:100%;
+#header {
+	width: 100%;
 	background-color: green;
 	height: 50px;
-	}
-#header h2{
+}
+
+#header h2 {
 	text-align: center;
 	font-size: 2.0em;
-	color:white;
-	padding-top:11px;
+	color: white;
+	padding-top: 11px;
 }
 
-#login{
-	width:50%;
-	height:25px;
-	background-color:lightgreen;
-	float:left;
+#login {
+	width: 50%;
+	height: 25px;
+	background-color: lightgreen;
+	float: left;
 	clear: right;
-	
-	
 }
 
-#loginparttwo{
-	
-	height:25px;
-	background-color:lightgreen;
-	width:50%
-	clear: right;
-	
-	
-	
+#loginparttwo {
+	height: 25px;
+	background-color: lightgreen;
+	width: 50% clear: right;
 }
 
-
-#login p{
-	padding:4px;
-	color: red;
-    
-}
-
-
-
-
-#loginparttwo p{
+#login p {
 	padding: 4px;
-text-align: right;
-color: red;
+	color: red;
 }
 
-
-#middle{
-	margin-top:50px;
-	 width:500px;
-	 margin-left: 370px;
-	 align:center;
-	background-color:yellow;
-	
-	 
+#loginparttwo p {
+	padding: 4px;
+	text-align: right;
+	color: red;
 }
 
+#middle {
+	margin-top: 50px;
+	width: 500px;
+	margin-left: 370px;
+	align: center;
+	background-color: yellow;
+}
 
-#middle p{
+#middle p {
 	margin: 6px;
 }
 
-#middle label{
-	width:130px;
-	float:left;
+#middle label {
+	width: 130px;
+	float: left;
 	text-align: justify;
 	padding-top: 8px;
-
-	
 }
 
 #contentmenu {
-width:100%;
+	width: 100%;
 }
 
-
-
-#contentmenu ul li{
-   float:left;
+#contentmenu ul li {
+	float: left;
 	border: 1px solid white;
-	width:16%;
+	width: 16%;
 	font-size: 1.2em;
 	text-align: center;
 	background-color: blue;
 	padding-left: 1.2px;
-	
 }
 
-
-h4{
+h4 {
 	font-size: 1.2em;
 	text-align: center;
-	line-height:20px;
+	line-height: 20px;
 	color: red;
-	
 }
-.input{
+
+.input {
 	margin-left: 70px;
 }
+
 #middle label.error {
-    color: blue;
-    float: right;
-    width: 200px;
+	color: blue;
+	float: right;
+	width: 200px;
 }

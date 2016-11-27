@@ -1,2 +1,3 @@
-    <hr/>  
-    <p>Copyright  2010-2014 javatpoint.com.</p>  
+
+<hr />
+<p>Designed and Developed for Learning</p>

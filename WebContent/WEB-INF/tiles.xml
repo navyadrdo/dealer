@@ -2,31 +2,110 @@
    <!DOCTYPE tiles-definitions PUBLIC
   "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
   "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
-    <tiles-definitions>  
-        <definition name="base.definition"  
-            template="/WEB-INF/jsp/layout.jsp">  
-            <put-attribute name="title" value="" />  
-            <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />  
-            <put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />  
-            <put-attribute name="body" value="" />  
-            <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />  
-        </definition>  
-      
-        <definition name="contact" extends="base.definition">  
-            <put-attribute name="title" value="Contact Manager" />  
-            <put-attribute name="body" value="/WEB-INF/jsp/contact.jsp" />  
-        </definition>  
-      
-        <definition name="hello" extends="base.definition">  
-            <put-attribute name="title" value="Hello Spring MVC" />  
-            <put-attribute name="body" value="/WEB-INF/jsp/hello.jsp" />  
-        </definition>  
-      <definition name="login" extends="base.definition">  
-            <put-attribute name="title" value="Login" />  
-            <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />  
-        </definition>
-        <definition name="mainpage" extends="base.definition">  
-            <put-attribute name="title" value="Login" />  
-            <put-attribute name="body" value="/WEB-INF/jsp/mainpage.jsp" />  
-        </definition>
-    </tiles-definitions>  
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+	<!-- <definition name="base.definition1" template="/WEB-INF/jsp/layout.jsp"> 
+		<put-attribute name="title" value="" /> <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" 
+		/> <put-attribute name="body" value="" /> <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" 
+		/> </definition> -->
+	<definition name="hello" extends="base.definition">
+		<put-attribute name="title" value="Hello Spring MVC" />
+		<put-attribute name="body" value="/WEB-INF/jsp/hello.jsp" />
+	</definition>
+
+	<!-- <definition name="login" extends="base.definition1"> <put-attribute 
+		name="title" value="Login" /> <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" 
+		/> </definition> -->
+	<definition name="mainpage" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/mainpage.jsp" />
+	</definition>
+	<definition name="AccessDenie" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/AccessDenie.jsp" />
+	</definition>
+	<definition name="add_sales_executive" extends="base.definition">
+		<put-attribute name="title" value="Sales Executive Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/add_sales_executive.jsp" />
+	</definition>
+	<definition name="billing_info" extends="base.definition">
+		<put-attribute name="title" value="Billing Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/billing_info.jsp" />
+	</definition>
+	<definition name="billsuccess" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/billsuccess.jsp" />
+	</definition>
+	<definition name="billsuccesstables" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/billsuccesstables.jsp" />
+	</definition>
+	<definition name="contact" extends="base.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/contact.jsp" />
+	</definition>
+	<definition name="dealer_reg" extends="base.definition">
+		<put-attribute name="title" value="Dealer Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dealer_reg.jsp" />
+	</definition>
+	<definition name="denied" extends="base.definition">
+		<put-attribute name="title" value="Access Denied Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/denied.jsp" />
+	</definition>
+	<definition name="dispatch_page" extends="base.definition">
+		<put-attribute name="title" value="Dispatch Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dispatch_page.jsp" />
+	</definition>
+	<definition name="Dispatchsuccesstables" extends="base.definition">
+		<put-attribute name="title" value="Dispatch Search Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/Dispatchsuccesstables.jsp" />
+	</definition>
+	<definition name="dispatchsuccess" extends="base.definition">
+		<put-attribute name="title" value="Dispatch Save Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dispatchsuccess.jsp" />
+	</definition>
+	<definition name="itemlsuccesstables" extends="base.definition">
+		<put-attribute name="title" value="Item Search Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/itemlsuccesstables.jsp" />
+	</definition>
+	<definition name="HelloSpring" extends="base.definition">
+		<put-attribute name="title" value="Hello Spring" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/HelloSpring.jsp" />
+	</definition>
+	<definition name="itemsuccess" extends="base.definition">
+		<put-attribute name="title" value="Item Search Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemsuccess.jsp" />
+	</definition>
+	<definition name="paymentsuccesstables" extends="base.definition">
+		<put-attribute name="title" value="Payment Search Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/paymentsuccesstables.jsp" />
+	</definition>
+	<definition name="paysuccess" extends="base.definition">
+		<put-attribute name="title" value="Payment Saved Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/paysuccess.jsp" />
+	</definition>
+	<definition name="salesexecutivesuccess" extends="base.definition">
+		<put-attribute name="title" value="Sales Success Page" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/salesexecutivesuccess.jsp" />
+	</definition>
+	<definition name="itemlist" extends="base.definition">
+		<put-attribute name="title" value="Items Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemlist.jsp" />
+	</definition>
+	<definition name="payment_page" extends="base.definition">
+		<put-attribute name="title" value="Payment Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/payment_page.jsp" />
+	</definition>
+</tiles-definitions>  

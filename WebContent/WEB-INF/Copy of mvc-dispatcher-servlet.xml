@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:cache="http://www.springframework.org/schema/cache"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:jee="http://www.springframework.org/schema/jee"
-	xmlns:lang="http://www.springframework.org/schema/lang"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:p="http://www.springframework.org/schema/p"
-	xmlns:task="http://www.springframework.org/schema/task"
-	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
@@ -22,9 +18,9 @@
 
 
 
-<!-- befor the package reading -->
-<context:component-scan base-package="com.dealer"/>
-<context:annotation-config />
+	<!-- befor the package reading -->
+	<context:component-scan base-package="com.dealer" />
+	<context:annotation-config />
 
 
 
@@ -36,15 +32,12 @@
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
-	</bean><!--
-// oracle -->
+	</bean><!-- // oracle -->
 	<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName"
-			value="oracle.jdbc.driver.OracleDriver">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver">
 		</property>
-		<property name="url"
-			value="jdbc:oracle:thin:@localhost:1521:xe">
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe">
 		</property>
 		<property name="username" value="deal"></property>
 		<property name="password" value="deal"></property>
@@ -54,47 +47,34 @@
 
 
 
-<!-- 	<bean id="ds" class="org.apache.commons.dbcp.BasicDataSource"
-		destroy-method="close">
-		<property name="driverClassName"
-			value="com.mysql.jdbc.Driver">
-		</property>
-		<property name="url"
-			value="jdbc:mysql://localhost:3306/testingdb">
-		</property>
-		<property name="username" value="root"></property>
-		<property name="password" value="mysql"></property>
+	<!-- <bean id="ds" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"> </property> 
+		<property name="url" value="jdbc:mysql://localhost:3306/testingdb"> </property> 
+		<property name="username" value="root"></property> <property name="password" 
+		value="mysql"></property> </bean> -->
 
-
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="mysessionfactory" />
 	</bean>
- -->
+	<!-- <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean> 
+		<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
+		<property name="messageConverters"> <list> <ref bean="jacksonMessageConverter"/> 
+		</list> </property> </bean> -->
 
- <bean id="transactionManager"
-    class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-      <property name="sessionFactory" ref="mysessionfactory" />
-   </bean>
-<!--
-<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-<property name="messageConverters">
-  <list>
-    <ref bean="jacksonMessageConverter"/>
-  </list>
-</property>
-</bean>
- -->
-
-<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" />
-<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
-    <property name="favorPathExtension" value="false"/>
-    <property name="mediaTypes">
-        <value>
-            json=application/json
-            xml=application/xml
-        </value>
-    </property>
-    <property name="defaultContentType" value="application/json"/>
-</bean>
+	<mvc:annotation-driven
+		content-negotiation-manager="contentNegotiationManager" />
+	<bean id="contentNegotiationManager"
+		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<property name="favorPathExtension" value="false" />
+		<property name="mediaTypes">
+			<value>
+				json=application/json
+				xml=application/xml
+			</value>
+		</property>
+		<property name="defaultContentType" value="application/json" />
+	</bean>
 
 
 	<bean id="mysessionfactory"
@@ -102,49 +82,33 @@
 		<property name="dataSource" ref="ds" />
 
 		<property name="annotatedClasses">
-		<list>
-		  <!--  <value>com.dealer.management.model.Dealer</value>
-			<value>com.dealer.management.model.DealerDept</value>
-         	 <value>com.dealer.management.model.Item</value>
-			<value>com.dealer.management.model.Billing</value>
-            <value>com.dealer.management.model.Dispatch</value>
-            <value>com.dealer.management.model.Payment</value>
-           <value>com.dealer.management.model.SalesExecutive</value>
-  <value>com.dealer.testingDb.Student</value>
-<value>com.dealer.testingDb.MarksDetails</value>
-            <value>com.dealer.management.model.SeDetails</value> -->
+			<list>
+				<!-- <value>com.dealer.management.model.Dealer</value> <value>com.dealer.management.model.DealerDept</value> 
+					<value>com.dealer.management.model.Item</value> <value>com.dealer.management.model.Billing</value> 
+					<value>com.dealer.management.model.Dispatch</value> <value>com.dealer.management.model.Payment</value> 
+					<value>com.dealer.management.model.SalesExecutive</value> <value>com.dealer.testingDb.Student</value> 
+					<value>com.dealer.testingDb.MarksDetails</value> <value>com.dealer.management.model.SeDetails</value> -->
 
-  <!--      <value>com.dealer.testingDb.Requisition</value>
-	   <value>com.dealer.testingDb.Project</value>
-		<value>com.dealer.testingDb.Channels</value>
-		<value>com.dealer.testingDb.ChannelDetails</value>
-		<value>com.dealer.testingDb.MotorDetails</value>
-		<value>com.dealer.testingDb.PhotoGraphyDetails</value>
-		<value>com.dealer.testingDb.TrailTeamDetails</value>
-		<value>com.dealer.testingDb.VideoDetails</value>
-		<value>com.dealer.testingDb.Squibno</value>
-		<value>com.dealer.testingDb.MeasurementPlan</value>
-		<value>com.dealer.testingDb.MplanMemberDetails</value>
-		<value>com.dealer.testingDb.TestDetails</value>
-		<value>com.dealer.testingDb.RecordingDetails</value> -->
+				<!-- <value>com.dealer.testingDb.Requisition</value> <value>com.dealer.testingDb.Project</value> 
+					<value>com.dealer.testingDb.Channels</value> <value>com.dealer.testingDb.ChannelDetails</value> 
+					<value>com.dealer.testingDb.MotorDetails</value> <value>com.dealer.testingDb.PhotoGraphyDetails</value> 
+					<value>com.dealer.testingDb.TrailTeamDetails</value> <value>com.dealer.testingDb.VideoDetails</value> 
+					<value>com.dealer.testingDb.Squibno</value> <value>com.dealer.testingDb.MeasurementPlan</value> 
+					<value>com.dealer.testingDb.MplanMemberDetails</value> <value>com.dealer.testingDb.TestDetails</value> 
+					<value>com.dealer.testingDb.RecordingDetails</value> -->
 
-			<!-- <value>com.dealer.management.model.User</value>
-			<value>com.dealer.management.model.Role</value> -->
-		     <!--  <value>com.dealer.management.model.User1</value>
-		      <value>com.dealer.management.model.Role1</value> -->
-		     <!--  <value>com.dealer.management.model.DealerAddress</value>
-			<value>com.dealer.management.model.DealerBank</value> -->
-		     </list>
-        </property>
-       	<property name="hibernateProperties">
+				<!-- <value>com.dealer.management.model.User</value> <value>com.dealer.management.model.Role</value> -->
+				<!-- <value>com.dealer.management.model.User1</value> <value>com.dealer.management.model.Role1</value> -->
+				<!-- <value>com.dealer.management.model.DealerAddress</value> <value>com.dealer.management.model.DealerBank</value> -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
 			<props>
-			          <!-- dialet value for oracle -->
-				<!-- <prop key="hibernate.dialect">
-					org.hibernate.dialect.OracleDialect
-				</prop>
-				 -->
+				<!-- dialet value for oracle -->
+				<!-- <prop key="hibernate.dialect"> org.hibernate.dialect.OracleDialect 
+					</prop> -->
 				<prop key="hibernate.dialect">
-						org.hibernate.dialect.MySQLDialect
+					org.hibernate.dialect.MySQLDialect
 				</prop>
 
 				<prop key="hibernate.show_sql">true</prop>
@@ -155,42 +119,19 @@
 
 	</bean>
 
-	<!-- <bean id="billingserviceimple" class="com.dealer.management.service.BillingserviceImpl">
-				</bean>
-	<bean id="billingdaoimpl"
-
-		class="com.dealer.management.dao.BillingDaoImple">
-	</bean>
-	<bean id="dispatchdaoimple"
-		class="com.dealer.management.dao.DispatchDaoimpl">
-	</bean>
-	<bean id="dispatchserviceimple"
-		class="com.dealer.management.service.Dispatchserviceimple">
-	</bean>
-
-	<bean id="itemserviceimpl"
-		class="com.dealer.management.service.ItemServiceImpl">
-	</bean>
-	<bean id="itemdaoimple"
-		class="com.dealer.management.dao.ItemdaoImple">
-	</bean>
-	<bean id="payserviceimpl"
-		class="com.dealer.management.service.PaymentServiceimple">
-	</bean>
-	<bean id="paydaoimpl"
-		class="com.dealer.management.dao.PaymentDaoimple"> -->
- <!-- 	</bean> -->
-	<!-- <bean id="salesexecutiveserviceimpl"
-		class="com.dealer.management.service.SalesExecutiveServiceImpl">
-	</bean>
-	<bean id="sedaoimpl"
-		class="com.dealer.management.dao.SalesExecutiveDaoImple">
-	</bean>
-	<bean id="seaddressserviceimpl"
-		class="com.dealer.management.service.Seaddressserviceimpl">
-	</bean>
-	<bean id="seaddressdaoimpl"
-		class="com.dealer.management.dao.SEaddressDaoImpl">
-	</bean> -->
+	<!-- <bean id="billingserviceimple" class="com.dealer.management.service.BillingserviceImpl"> 
+		</bean> <bean id="billingdaoimpl" class="com.dealer.management.dao.BillingDaoImple"> 
+		</bean> <bean id="dispatchdaoimple" class="com.dealer.management.dao.DispatchDaoimpl"> 
+		</bean> <bean id="dispatchserviceimple" class="com.dealer.management.service.Dispatchserviceimple"> 
+		</bean> <bean id="itemserviceimpl" class="com.dealer.management.service.ItemServiceImpl"> 
+		</bean> <bean id="itemdaoimple" class="com.dealer.management.dao.ItemdaoImple"> 
+		</bean> <bean id="payserviceimpl" class="com.dealer.management.service.PaymentServiceimple"> 
+		</bean> <bean id="paydaoimpl" class="com.dealer.management.dao.PaymentDaoimple"> -->
+	<!-- </bean> -->
+	<!-- <bean id="salesexecutiveserviceimpl" class="com.dealer.management.service.SalesExecutiveServiceImpl"> 
+		</bean> <bean id="sedaoimpl" class="com.dealer.management.dao.SalesExecutiveDaoImple"> 
+		</bean> <bean id="seaddressserviceimpl" class="com.dealer.management.service.Seaddressserviceimpl"> 
+		</bean> <bean id="seaddressdaoimpl" class="com.dealer.management.dao.SEaddressDaoImpl"> 
+		</bean> -->
 
 </beans>
